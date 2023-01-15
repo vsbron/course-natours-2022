@@ -1,0 +1,134 @@
+.section-about {
+  background-color: $color-grayf7;
+  padding: 36vh 0;
+  margin-top: -20vh;
+
+  @include respond(tab-port) {
+    padding: 28vh 0 30vh;
+  }
+}
+
+.section-features {
+  padding: 25vh 0;
+  margin-top: -18vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url(../img/nat-4.jpg);
+  background-size: cover;
+
+  transform: skewY(-7deg);
+
+  & > * {
+    transform: skewY(7deg);
+  }
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/nat-4-small.jpg);
+  }
+
+  @include respond(tab-port) {
+    padding: 10vh 0;
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url(../img/nat-4.jpg);
+  }
+}
+
+.section-tours {
+  background-color: $color-grayf7;
+  padding: 36vh 0 15rem;
+  margin-top: -20vh;
+
+  @include respond(tab-port) {
+    padding: 30vh 0 10rem;
+  }
+}
+
+.section-stories {
+  padding: 15rem 0;
+  position: relative;
+  overflow: hidden;
+
+  @include respond(tab-port) {
+    padding: 10rem 0;
+  }
+}
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    $color-primary-light,
+    $color-primary-dark
+  );
+}
+
+.book {
+  background-image: linear-gradient(
+      105deg,
+      rgba($color-white, 0.9) 50%,
+      transparent 50%
+    ),
+    url(../img/nat-10.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+
+  @include respond(tab-land) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 65%,
+        transparent 65%
+      ),
+      url(../img/nat-10-small.jpg);
+    background-size: cover;
+  }
+
+  @include respond(tab-port) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../img/nat-10-small.jpg);
+  }
+
+  @media only screen and (min-resolution: 192dpi) and (min-width: 62.5em),
+    only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 62.5em) {
+    background-image: linear-gradient(
+        105deg,
+        rgba($color-white, 0.9) 50%,
+        transparent 50%
+      ),
+      url(../img/nat-10.jpg);
+  }
+
+  &__form {
+    width: 50%;
+    padding: 6rem;
+
+    @include respond(tab-land) {
+      width: 55%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+      padding: 4rem;
+    }
+  }
+}
